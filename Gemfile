@@ -54,6 +54,8 @@ group :development do
   gem 'annotate'
 end
 
+# Production & Development Gems
 gem 'bootstrap-sass'
+gem 'devise'
 
 
