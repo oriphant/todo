@@ -22,9 +22,14 @@
 #  updated_at             :datetime         not null
 #
 
-class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+class UserSerializer < ActiveModel::Serializer
+  attributes :id, :created_at, :name, :email
+
+  def name
+    object.name
+  end
+
+  def created_at
+    object.created_at.strftime('%B %d, %Y')
+  end
 end

@@ -9,7 +9,6 @@
 #  updated_at :datetime         not null
 #
 
-class List < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :item
+class ListSerializer < ActiveModel::Serializer
+  attributes :id
 end

@@ -1,15 +1,13 @@
 # == Schema Information
 #
-# Table name: lists
+# Table name: items
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  item_id    :integer
+#  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class List < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :item
+class ItemSerializer < ActiveModel::Serializer
+  attributes :id
 end

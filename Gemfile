@@ -58,5 +58,7 @@ end
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'figaro', '1.0'
+gem 'active_model_serializers'
+gem 'annotate'
 
 
