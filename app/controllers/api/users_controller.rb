@@ -4,9 +4,8 @@ class Api::UsersController < ApiController
   before_action :authenticated?
 
   def index
-    each do |x|
-      UserSerializer.new(List.find(x).to_json
-    end
+    users = User.all
+    render json: users, each_serializer: UserSerializer
   end
 
 end
